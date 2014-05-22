@@ -13,7 +13,7 @@ class MeetingsController < ApplicationController
     @meeting.reservations.build(reservation_params)
     @conference_rooms = ConferenceRoom.all
     if @meeting.save
-      # Add your mailer code here
+      MeetingMailer.meeting_scheduled.deliver
       redirect_to meetings_path
     else
       render :new
