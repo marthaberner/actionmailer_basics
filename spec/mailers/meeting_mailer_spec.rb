@@ -8,7 +8,7 @@ describe MeetingMailer do
     end
 
     it 'goes to the proper user' do
-      expect(message.to).to eq ['employees@example.com']
+        expect(message.to).to eq ['employees@example.com']
     end
 
     it 'has the proper subject' do
